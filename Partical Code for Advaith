@@ -1,0 +1,130 @@
+#Receiving DNA sequence file from system
+file_input= open(“seq1.txt”, ”r”)
+
+#To store the read information in to a variable
+sequence = file_input.read()
+
+#To print the read information
+print sequence #applicable only in python version 2.7 or below
+print (sequence) #applicable in all versions of python
+
+#To print the length of sequence
+print (“The length of the sequence is”, len(sequence))
+
+
+#To count the no. of “A, T, G, C” from the sequence
+countA = sequence.count(“A”) + sequence.count(“a”)
+
+countT = sequence.count(“T”) + sequence.count(“t”)
+
+countG = sequence.count(“G”) + sequence.count(“g”)
+
+countC = sequence.count(“C”) + sequence.count(“c”)
+
+countN = sequence.count(“N”) + sequence.count(“n”)
+
+#Print count
+print("The count of A is:", countA, "\nThe count of T is:", countT,"\nThe count of G is:", countG, "\nThe count of C is:", countC,"\nThe count of U is:", countU, "\nThe count of N is:", countN)
+
+#No. of C, H, N, O in Adenine
+countCA = countA*5
+
+countHA= countA*5
+
+countNA = countA*5
+
+countOA = countA*0
+
+#No. of C, H, N, O in Thymine
+countCT = countT*5
+
+countHT= countT*6
+
+countNT = countT*2
+
+countOT = countT*2
+
+#No. of C, H, N, O in Guanine
+countCG = countG*5
+
+countHG= countG*5
+
+countNG = countG*5
+
+countOG = ctountG*1
+
+#No. of C, H, N, O in Cytosine
+countCC = countC*4
+
+countHC= countC*5
+
+countNC = countC*3
+
+countOC = countC*1
+
+#Printing the no. of C, H, N, O in A or T or G or C
+print("in " + str(countA)+ " Adenine molecules, there are " + str(countCA) + " number of Carbons ")
+
+
+#Total no. of atoms present in- A, T, G, C in the whole sequence
+#wseq_Aatoms = no. of atoms present in all adenine molecules in the whole sequence
+wseq_Aatoms = countA*15
+
+wseq_Tatoms = countT*15
+
+wseq_Gatoms = countG*16
+
+wseq_Catoms = countC*13 
+
+#Printing the no. of atoms of A,T, G, C in the whole sequence
+print ("the total no. of atoms present in all " + str(countA) + " adenines are " + str(countA*15)) 
+
+print ("the total no. of atoms present in all " + str(countT) + " Thymines are " + str(countB*15))
+
+print ("the total no. of atoms present in all " + str(countG) + " adenines are " + str(countG*16))
+
+print ("the total no. of atoms present in all " + str(countC) + " adenines are " + str(countA*13)) 
+
+
+#Total no. of Electrons/Protons in all A,T, G, C in the whole sequence
+#wseq_Aelepro = no. of electrons/protons present in all adenines in whole sequence
+wseq_Aelepro= countA*70
+
+wseq_Telepro = countT*66
+
+wseq_Gelepro = countG*78
+
+wseq_Celepro = countC*58
+
+#Printing the no. of electrons in A, T, C, G in the whole sequence
+print(“the total no. of electrons in ” + str(countA) + “ no. of Adenines in whole sequence are ” + str(wseq_Aelepro))
+
+print(“the total no. of electrons in ” + str(countT) + “ no. of Thymines in whole sequence are ” + str(wseq_Telepro))
+
+print(“the total no. of electrons in ” + str(countG) + “ no. of Guanines in whole sequence are ” + str(wseq_Gelepro))
+
+print(“the total no. of electrons in ” + str(countC) + “ no. of Cytosines in whole sequence are ” + str(wseq_Celepro))
+
+
+#Total no. Of Neutrons in all A,T, G, C in the whole sequence
+#wseq_Aneutrons = no. of neutrons present in all adenines in whole sequence
+wseq_Aneutrons= countA*65
+
+wseq_Tneutrons = countT*60
+
+wseq_Gneutrons = countG*73
+
+wseq_Cneutrons = countC*53
+
+#Printing the no. of neutrons in A, T, C G in the whole sequence
+print(“the total no. of neutrons in ” + str(countA) + “ no. of Adenines in whole sequence are ” + str(wseq_Aneutrons))
+
+print(“the total no. of neutrons in ” + str(countT) + “ no. of Thymines in whole sequence are ” + str(wseq_Tneutrons))
+
+print(“the total no. of neutrons in ” + str(countG) + “ no. of Guanines in whole sequence are ” + str(wseq_Gneutrons))
+
+print(“the total no. of neutrons in ” + str(countC) + “ no. of Cytosines in whole sequence are ” + str(wseq_Cneutrons))
+
+
+
+# INTERNAL REGULATIONS AND COMMUNICATIONS - Coming soon....
